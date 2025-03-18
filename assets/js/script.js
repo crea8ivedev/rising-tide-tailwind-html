@@ -227,3 +227,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+window.addEventListener("scroll", function () {
+    let sidebar = document.querySelector(".sidebar-nav");
+    let footer = document.querySelector("footer"); // Footer ko select karein
+
+    let footerPosition = footer.getBoundingClientRect().top; // Footer ki position lein
+    let windowHeight = window.innerHeight; // Window ki height
+
+    if (footerPosition <= windowHeight) {
+        sidebar.classList.add("scrolled-to-footer"); // Class add karein jab footer dikhai de
+    } else {
+        sidebar.classList.remove("scrolled-to-footer"); // Class remove karein jab footer chala jaye
+    }
+});
+
+// Search Exapnd
+document.addEventListener('DOMContentLoaded', function() {
+    const searchSpan = document.querySelector('.search-expand .search-input span');
+    const searchForm = document.querySelector('.search-form');
+    const searchInput = document.querySelector('.search-expand input.search-text');
+    const closeButton = document.querySelector('.search-input button');
+
+    searchSpan.addEventListener('click', function() {
+        searchForm.classList.add('active');
+        searchSpan.style.display = 'none';
+        searchInput.focus();
+    });
+
+    closeButton.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent form submission
+        searchForm.classList.remove('active');
+        searchSpan.style.display = ''; // Reset to default display
+        searchInput.value = ''; // Clear the input
+    });
+});

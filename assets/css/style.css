@@ -339,7 +339,7 @@
   }
 
   .scrolled-to-footer::before{
-    @apply h-[80px] bg-scrollfooter
+    @apply !h-[80px] !bg-scrollfooter
   }
 
   /* =============================== Hero Banner ===============================  */
@@ -455,7 +455,7 @@
   }
 
   .video-slider-wrapper .video-slider-grid .mobile-only-grid{
-    @apply hidden 640:grid 640:gap-[40px]
+    @apply hidden 640:grid 640:gap-[40px] items-center
   }
 
   .video-slider-wrapper .video-slider-grid .mobile-only-grid .img{
@@ -523,7 +523,7 @@
   }
 
   footer.footer .footer-left{
-    @apply flex items-center gap-[20px] 640:flex-col
+    @apply flex items-center gap-[20px] 640:flex-col 1200:justify-center
   }
 
   footer.footer .footer-left .logo a img{
