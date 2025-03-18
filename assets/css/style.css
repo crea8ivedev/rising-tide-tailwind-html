@@ -436,8 +436,43 @@
     @apply 640:hidden
   }
 
-  /* =============================== Footer CSS ===============================  */
+  /* =============================== Video section CSS ===============================  */
 
+  .video-slider-wrapper{
+    @apply realtive z-9 pb-50 640:py-20
+  }
+
+  .video-slider-wrapper .video-slider-grid{
+    @apply mt-30
+  }
+
+  .video-slider-wrapper .video-slider-grid .video-slider{
+    @apply pb-80
+  }
+
+  .video-slider-wrapper .video-slider-grid .video-slider .img{
+    @apply relative pt-[58.41%]
+  }
+
+  .video-slider-wrapper .video-slider-grid .video-slider .img img{
+    @apply absolute top-0 left-0 w-full h-full object-cover block
+  }
+
+  .video-slider-wrapper .video-slider-grid .mobile-only-grid .img{
+    @apply relative pt-[58.41%]
+  }
+  
+  .video-slider-wrapper .video-slider-grid .mobile-only-grid .img img{
+    @apply absolute top-0 left-0 w-full h-full object-cover block
+  }
+
+  .video-slider-wrapper .video-slider-grid .video-content{
+    @apply pt-20 pr-50 640:pt-20 640:pr-15
+  }
+
+  .video-slider-wrapper .video-slider-grid .video-content h6{
+    @apply text-white-100 text-18
+  }
 }
 
 

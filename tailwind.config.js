@@ -191,6 +191,7 @@ module.exports = {
                 10: '10px',
                 25: '25px',
                 '50_per': '50%',
+                
             },
             backgroundImage: theme => ({
                 none: 'none',
