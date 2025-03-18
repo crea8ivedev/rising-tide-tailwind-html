@@ -9,10 +9,6 @@
     -webkit-transition: all 300ms ease-in-out;
   }
 
-  html{
-    @apply overflow-hidden
-  }
-
   body{
     @apply bg-black-100 p-0 m-0 leading-[21px] font-elza font-normal tracking-[0] relative
   }
@@ -439,7 +435,7 @@
   /* =============================== Video section CSS ===============================  */
 
   .video-slider-wrapper{
-    @apply realtive z-9 pb-50 640:py-20
+    @apply relative z-9 pb-50 640:py-20
   }
 
   .video-slider-wrapper .video-slider-grid{
@@ -458,6 +454,10 @@
     @apply absolute top-0 left-0 w-full h-full object-cover block
   }
 
+  .video-slider-wrapper .video-slider-grid .mobile-only-grid{
+    @apply hidden 640:grid 640:gap-[40px]
+  }
+
   .video-slider-wrapper .video-slider-grid .mobile-only-grid .img{
     @apply relative pt-[58.41%]
   }
@@ -471,7 +471,147 @@
   }
 
   .video-slider-wrapper .video-slider-grid .video-content h6{
-    @apply text-white-100 text-18
+    @apply text-white-100 text-18 font-600 capitalize 640:text-14
+  }
+
+  .video-slider-wrapper .video-slider-grid .video-content .content{
+    @apply pt-10 640:pt-[2px]
+  }
+
+  .video-slider-wrapper .video-slider-grid .video-content .content p{
+    @apply leading-20
+  }
+
+  .video-slider-wrapper .swiper-dots{
+    @apply !w-full !bottom-0 text-center
+  }
+
+  /* =============================== Section Top Info ===============================  */
+
+  .section-top-info{
+    @apply flex gap-[15px] items-center 640:justify-between 640:border-b-1 640:border-b-[#818181]
+  }
+
+  .section-top-info .btn-custom{
+    @apply flex gap-[10px] items-center
+  }
+
+  .section-top-info .btn-custom a{
+    @apply w-[147px] text-center justify-center 1599:!w-[115px] 1599:h-[41px]
+  }
+
+  /* =============================== Search Expand ===============================  */
+
+  .search-expand{
+    @apply relative
+  }
+  .search-expand span{
+    @apply font-elza text-22 font-500 text-black-300 absolute top-[2px] left-0 w-full h-full text-center flex items-center justify-center cursor-pointer 1599:text-18
+  }
+  .search-expand .search-input{
+    @apply relative
+  }
+  .search-expand input{
+    @apply w-[147px] h-[48px] px-15 border-0 font-elza text-22 font-500 bg-grey-100 text-black-300 rounded-10 m-0 cursor-pointer 1599:w-[115px] 1599:h-[41px] placeholder:font-elza placeholder:text-22 placeholder:font-500 placeholder:text-black-300 placeholder:!text-center;
+    transition: z-index 0.8s, width 0.5s, width 0.3s ease, border 0.3s;
+  }
+
+  /* =============================== Footer ===============================  */
+
+  footer.footer{
+    @apply bg-white-200 pt-60 pb-25 640:!pb-120 640:py-30
+  }
+
+  footer.footer .footer-left{
+    @apply flex items-center gap-[20px] 640:flex-col
+  }
+
+  footer.footer .footer-left .logo a img{
+    mix-blend-mode: multiply;
+  }
+
+  footer.footer .footer-left .content {
+    @apply w-[138px]
+  }
+  
+  footer.footer .footer-left .content p{
+    @apply text-14
+  }
+
+  footer.footer .footer-left .content p a{
+    @apply text-black-200
+  }
+
+  footer.footer .footer-menu{
+    @apply 640:pt-20
+  }
+
+  footer.footer .footer-menu ul{
+    @apply flex gap-[20px] justify-center
+  }
+
+  footer.footer .footer-menu ul li{
+    @apply relative
+  }
+
+  footer.footer .footer-menu ul li a{
+    @apply text-black-200 text-14 font-500 hover:opacity-50
+  }
+
+  footer.footer .footer-menu ul li::before{
+    @apply content-[""] absolute top-[4px] -right-[10px] w-[1px] h-[12px] bg-black-200
+  }
+
+  footer.footer .footer-menu ul li:last-child::before{
+    @apply hidden
+  }
+
+  footer.footer .footer-icon{
+    @apply pt-15
+  }
+
+  footer.footer .footer-icon ul{
+    @apply flex gap-[10px] justify-center
+  }
+
+  footer.footer .footer-icon ul li a{
+    @apply relative
+  }
+
+  footer.footer .footer-icon ul li a:hover img{
+    @apply relative -mt-10
+  }
+
+  footer.footer .copyright{
+    @apply mt-50 border-0 border-t-1 border-solid border-t-[#BEBEBE] pt-30 640:mt-20 640:pt-20
+  }
+  
+  footer.footer .copyright .copyright-content{
+    @apply 640:justify-center 640:flex-col
+  }
+
+  footer.footer .copyright .copyright-content .jac-logo{
+    @apply 640:text-center
+  }
+
+  footer.footer .copyright ul{
+    @apply flex gap-[20px] 640:gap-[10px] 640:flex-col 640:items-center
+  }
+
+  footer.footer .copyright ul li{
+    @apply relative
+  }
+
+  footer.footer .copyright ul li::before{
+    @apply content-[""] absolute top-[5px] -right-[10px] w-[1px] h-[13px] bg-black-200 640:hidden
+  }
+
+  footer.footer .copyright ul li a{
+    @apply text-black-200 text-14 hover:opacity-50
+  }
+  
+  footer.footer .copyright ul li:last-child::before{
+    @apply hidden
   }
 }
 
